@@ -9,11 +9,9 @@ export default function ColorSwitcher() {
       className={`min-h-screen flex flex-col items-center justify-center transition duration-300 px-5 md:px-0 ${bgColor}`}
     >
       <div className="bg-[#FFFCF5] shadow-2xl border-2 border-[#dfddd8] p-8 rounded-2xl flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold mb-6 text-shadow-lg">
-          Pick a Background Color
-        </h1>
+        <h1 className={`text-2xl font-bold mb-6`}>Pick a Background Color</h1>
         <div className="flex flex-wrap gap-4 max-w-md justify-center">
-          {/* Original 4 */}
+          {/* Solid Colors */}
           <button
             onClick={() => setBgColor("bg-red-500")}
             className="px-4 py-2 bg-red-500 shadow-lg shadow-red-500/50 text-white rounded hover:bg-red-600"
@@ -38,8 +36,6 @@ export default function ColorSwitcher() {
           >
             Yellow
           </button>
-
-          {/* 10 More */}
           <button
             onClick={() => setBgColor("bg-purple-500")}
             className="px-4 py-2 bg-purple-500 shadow-lg shadow-purple-500/50 text-white rounded hover:bg-purple-600"
@@ -105,6 +101,48 @@ export default function ColorSwitcher() {
             className="px-4 py-2 bg-white shadow-lg shadow-white/50 text-black border-2 border-gray-500 rounded hover:bg-white"
           >
             White
+          </button>
+
+          {/* Gradient Buttons */}
+          <button
+            onClick={() =>
+              setBgColor("bg-gradient-to-r from-pink-500 to-yellow-500")
+            }
+            className="px-4 py-2 bg-gradient-to-r from-pink-500 to-yellow-500 shadow-lg text-white rounded hover:from-pink-600 hover:to-yellow-600"
+          >
+            Sunset
+          </button>
+          <button
+            onClick={() =>
+              setBgColor("bg-gradient-to-r from-blue-500 to-green-500")
+            }
+            className="px-4 py-2 bg-gradient-to-r from-blue-500 to-green-500 shadow-lg text-white rounded hover:from-blue-600 hover:to-green-600"
+          >
+            Ocean
+          </button>
+          <button
+            onClick={() =>
+              setBgColor("bg-gradient-to-r from-yellow-400 to-orange-500")
+            }
+            className="px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg text-white rounded hover:from-yellow-500 hover:to-orange-600"
+          >
+            Mango
+          </button>
+          <button
+            onClick={() =>
+              setBgColor("bg-gradient-to-r from-indigo-500 to-pink-500")
+            }
+            className="px-4 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 shadow-lg text-white rounded hover:from-indigo-600 hover:to-pink-600"
+          >
+            Purple Bliss
+          </button>
+          <button
+            onClick={() =>
+              setBgColor("bg-gradient-to-r from-green-400 to-blue-500")
+            }
+            className="px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 shadow-lg text-white rounded hover:from-green-500 hover:to-blue-600"
+          >
+            Emerald Sea
           </button>
         </div>
       </div>
