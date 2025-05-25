@@ -8,7 +8,9 @@ export default function ColorSwitcher() {
       className={`min-h-screen flex flex-col items-center justify-center transition duration-300 px-5 md:px-0 ${bgColor}`}
     >
       <div className="bg-[#FFFCF5] shadow-2xl border-2 border-[#dfddd8] p-8 rounded-2xl flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold mb-6">Pick a Background Color</h1>
+        <h1 className="text-2xl font-bold mb-6 text-shadow-lg">
+          Pick a Background Color
+        </h1>
         {/* Updated grid layout */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* Solid Colors */}
